@@ -6,6 +6,7 @@ Projet SI ISIL B
 ## Backend:
 
 1- Installer requirements.txt
+
 2- Lancer la backend django
 
 ## Frontend:
