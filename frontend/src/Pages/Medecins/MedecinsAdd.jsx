@@ -69,7 +69,7 @@ function MedecinsAdd() {
             <option value="5">ORL</option>
             <option value="6">Generaliste</option>
           </select>
-          <button>submit</button>
+          <button>Submit</button>
         </form>
       </div>
     </div>

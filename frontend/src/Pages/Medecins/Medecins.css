@@ -21,10 +21,20 @@
 .medecins-add-form {
   display: flex;
   flex-direction: column;
+  gap:10px
 }
 
-.medecins-add-form input{
+.medecins-add-form input, select{
   padding:10px;
   border: 2px solid black;
   border-radius: 4px;
+}
+
+.medecins-add-form button {
+  color:white;
+  background-color: rgb(255, 47, 47);
+  padding:15px;
+  font-weight: 900;
+  border: none;
+  border-radius: 10px;
 }
