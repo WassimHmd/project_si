@@ -8,6 +8,7 @@ import { useNavigate } from "react-router";
 import MedecinsUpdate from "./MedecinsUpdate";
 
 function Medecins() {
+
   const [medecins, setMedecins] = useState([]);
   const [trigger, setTrigger] = useState(false)
   const navigate = useNavigate()
@@ -22,8 +23,8 @@ function Medecins() {
   return (
     <div>
       <Navbar />
-      
       <div className="medecins-container">
+        <h1>Medecins</h1>
         <div>
           <button className="add-button" onClick={()=>navigate("./add")}>
             ADD

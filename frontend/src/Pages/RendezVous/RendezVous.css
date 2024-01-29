@@ -2,6 +2,13 @@
   padding: 50px 200px;
 }
 
+.medecins-container > h1{
+  font-size: 3.0em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color:rgb(255, 47, 47);
+}
+
 .add-button {
   background-color: rgb(255, 47, 47);
   color: white;

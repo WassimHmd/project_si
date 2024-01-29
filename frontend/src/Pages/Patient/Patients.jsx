@@ -24,6 +24,7 @@ function Patients() {
       <Navbar />
       
       <div className="medecins-container">
+        <h1>Patients</h1>
         <div>
           <button className="add-button" onClick={()=>navigate("./add")}>
             ADD

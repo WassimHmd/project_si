@@ -25,7 +25,7 @@ function Home() {
           <img src={RDV}/>
           <h1>Rendez-Vous</h1>
         </div>
-        <div className="home-card">
+        <div className="home-card" onClick={()=>navigate('/observations')}>
           <img src={clipboard}/>
           <h1>Observations</h1>
         </div>

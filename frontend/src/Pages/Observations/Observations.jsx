@@ -3,19 +3,19 @@ import { useEffect, useState } from "react";
 import Navbar from "../../shared/Navbar/Navbar";
 import ListItem from "../../shared/ListItem/ListItem";
 
-import "./RendezVous.css";
+import "./Observations.css";
 import { useNavigate } from "react-router";
-import RendezVousUpdate from "./RendezVousUpdate";
+import ObservationsUpdate from "./ObservationsUpdate.jsx";
 
-function RendezVous() {
-  const [rendezVous, setRendezVous] = useState([]);
+function Observations() {
+  const [observations, setObservations] = useState([]);
   const [trigger, setTrigger] = useState(false)
   const navigate = useNavigate()
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/RendezVous/")
+      .get("http://127.0.0.1:8000/api/Observations/")
       .then((res) => {
-        setRendezVous(res.data);
+        setObservations(res.data);
       })
       .catch((err) => console.error(err));
   }, [trigger]);
@@ -24,36 +24,35 @@ function RendezVous() {
       <Navbar />
       
       <div className="medecins-container">
-        <h1>Patients</h1>
+        <h1>Observations</h1>
         <div>
           <button className="add-button" onClick={()=>navigate("./add")}>
             ADD
           </button>
         </div>
-        {rendezVous.map((RDV) => (
+        {observations.map((obs) => (
           <ListItem
-            key={RDV.RDV_ID}
+            key={obs.observation_ID}
             fields={[
-              { title: "ID Patient", value: RDV.patient },
-              { title: "ID Medecin", value: RDV.medecin },
-              { title: "Date", value: RDV.date },
-              { title: "Heure", value: RDV.heure },
+              { title: "ID Patient", value: obs.patient },
+              { title: "ID Medecin", value: obs.medecin },
+              { title: "Date", value: obs.dateCreation },
             ]}
             onDelete={() => {
               axios
                 .delete(
-                  `http://127.0.0.1:8000/api/RendezVous/${RDV.RDV_ID}`
+                  `http://127.0.0.1:8000/api/Observations/${obs.observation_ID}`
                 )
                 .then(() => {
-                  setRendezVous((state) =>
+                  setObservations((state) =>
                     state.filter(
-                      (elem) => elem.RDV_ID != RDV.RDV_ID
+                      (elem) => elem.observation_ID != obs.observation_ID
                     )
                   );
                 })
                 .catch((err) => console.error(err));
             }}
-            onEdit={<RendezVousUpdate data_raw={RDV} onSuccess={()=>{setTrigger(state=>!state)}}/>}
+            onEdit={<ObservationsUpdate data_raw={obs} onSuccess={()=>{setTrigger(state=>!state)}}/>}
           />
         ))}
       </div>
@@ -61,4 +60,4 @@ function RendezVous() {
   );
 }
 
-export default RendezVous;
+export default Observations;

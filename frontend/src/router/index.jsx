@@ -6,6 +6,8 @@ import Patients from "../Pages/Patient/Patients";
 import PatientsAdd from "../Pages/Patient/PatientsAdd";
 import RendezVous from "../Pages/RendezVous/RendezVous";
 import RendezVousAdd from "../Pages/RendezVous/RendezVousAdd";
+import Observations from "../Pages/Observations/Observations";
+import ObservationsAdd from "../Pages/Observations/ObservationsAdd";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,16 @@ const router = createBrowserRouter([
         path: "/rendezvous/add",
         element: <RendezVousAdd />,
         id: "/rendezvous/add"
+      },
+      {
+        path: "/observations",
+        element: <Observations />,
+        id: "/observations"
+      },
+      {
+        path: "/observations/add",
+        element: <ObservationsAdd />,
+        id: "/observations/add"
       },
     ],
   },

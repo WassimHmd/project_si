@@ -20,7 +20,7 @@ function RendezVousUpdate({data_raw, onSuccess}) {
       consultation,
       operation,
     } = e.target;
-    axios.put("http://127.0.0.1:8000/api/RendezVous/",{
+    axios.put(`http://127.0.0.1:8000/api/RendezVous/${data.RDV_ID}/`,{
       date:date.value,
       heure:heure.value,
       patient:patient.value,
