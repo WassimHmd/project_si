@@ -5,9 +5,11 @@ import ListItem from "../../shared/ListItem/ListItem";
 
 import "./Medecins.css";
 import { useNavigate } from "react-router";
+import MedecinsUpdate from "./MedecinsUpdate";
 
 function Medecins() {
   const [medecins, setMedecins] = useState([]);
+  const [trigger, setTrigger] = useState(false)
   const navigate = useNavigate()
   useEffect(() => {
     axios
@@ -16,7 +18,7 @@ function Medecins() {
         setMedecins(res.data);
       })
       .catch((err) => console.error(err));
-  }, []);
+  }, [trigger]);
   return (
     <div>
       <Navbar />
@@ -49,6 +51,7 @@ function Medecins() {
                 })
                 .catch((err) => console.error(err));
             }}
+            onEdit={<MedecinsUpdate data_raw={medecin} onSuccess={()=>{setTrigger(state=>!state)}}/>}
           />
         ))}
       </div>
