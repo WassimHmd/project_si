@@ -1,0 +1,44 @@
+.list-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-left: solid 5px red;
+  border-radius: 4px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0px 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.list-item-fields {
+  display: flex;
+  align-items: center;
+  gap: 15px
+}
+
+.list-item-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+.list-item-buttons button {
+  background-color: white;
+  border: 1px solid rgb(255, 47, 47);
+  border-radius: 4px;
+  color: rgb(255, 47, 47);
+  padding:2px 5px;
+}
+
+.list-item-buttons button:hover {
+  background-color: rgb(255, 47, 47);
+  color:white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.field-title {
+  font-weight: bold;
+  color: rgb(255, 47, 47);
+}
+
