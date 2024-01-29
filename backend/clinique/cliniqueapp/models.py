@@ -86,7 +86,7 @@ class RDV(models.Model):
   operation = models.ForeignKey(Operation,on_delete=models.CASCADE,null=True,blank=True)
 
   def save(self, *args, **kwargs):
-    self.service = self.Medecin.specialite
+    self.service = self.medecin.specialite
     if self.consultation and self.operation:
       raise ValidationError("Un rendez-vous ne peut pas avoir à la fois une consultation et une opération.")
     if not self.consultation and not self.operation:

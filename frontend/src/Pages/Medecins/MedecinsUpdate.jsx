@@ -31,7 +31,6 @@ function MedecinsUpdate({data_raw, onSuccess}) {
       specialite:specialite.value,
     }).then(()=>{
       navigate("/medecins");
-      console.log("normalement temchi")
       onSuccess()
     })
   };

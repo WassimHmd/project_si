@@ -1,0 +1,40 @@
+.medecins-container {
+  padding: 50px 200px;
+}
+
+.add-button {
+  background-color: rgb(255, 47, 47);
+  color: white;
+  padding: 20px 30px;
+  font-size: 2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.medecins-add-container {
+  padding:30px 20%;
+  height: 80vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.medecins-add-form {
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
+.medecins-add-form input, select{
+  padding:10px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.medecins-add-form button {
+  color:white;
+  background-color: rgb(255, 47, 47);
+  padding:15px;
+  font-weight: 900;
+  border: none;
+  border-radius: 10px;
+}

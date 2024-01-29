@@ -17,11 +17,11 @@ function Home() {
           <img src={Medecin}/>
           <h1>Medecins</h1>
         </div>
-        <div className="home-card">
+        <div className="home-card" onClick={()=>navigate('/patients')}>
           <img src={Patient}/>
           <h1>Patients</h1>
         </div>
-        <div className="home-card">
+        <div className="home-card" onClick={()=>navigate('/rendezvous')}>
           <img src={RDV}/>
           <h1>Rendez-Vous</h1>
         </div>

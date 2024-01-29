@@ -2,6 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import Medecins from "../Pages/Medecins/Medecins";
 import MedecinsAdd from "../Pages/Medecins/MedecinsAdd";
+import Patients from "../Pages/Patient/Patients";
+import PatientsAdd from "../Pages/Patient/PatientsAdd";
+import RendezVous from "../Pages/RendezVous/RendezVous";
+import RendezVousAdd from "../Pages/RendezVous/RendezVousAdd";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +25,26 @@ const router = createBrowserRouter([
         path: "/medecins/add",
         element: <MedecinsAdd />,
         id: "/medecins/add"
+      },
+      {
+        path: "/patients",
+        element: <Patients />,
+        id: "/patients"
+      },
+      {
+        path: "/patients/add",
+        element: <PatientsAdd />,
+        id: "/patients/add"
+      },
+      {
+        path: "/rendezvous",
+        element: <RendezVous />,
+        id: "/rendezvous"
+      },
+      {
+        path: "/rendezvous/add",
+        element: <RendezVousAdd />,
+        id: "/rendezvous/add"
       },
     ],
   },
