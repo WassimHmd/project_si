@@ -81,7 +81,7 @@ function PatientsUpdate({ data_raw, onSuccess }) {
           <input
             id="telephone"
             name="telephone"
-            value={data.telephone}
+            value={data.num_tel}
             onChange={handleChange}
           />
 
